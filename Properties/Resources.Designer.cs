@@ -73,9 +73,39 @@ namespace Memoria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_left_solid {
+            get {
+                object obj = ResourceManager.GetObject("arrow_left_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrow_left_solid_white {
+            get {
+                object obj = ResourceManager.GetObject("arrow_left_solid_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap B {
             get {
                 object obj = ResourceManager.GetObject("B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_solid_white {
+            get {
+                object obj = ResourceManager.GetObject("book_solid_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +133,59 @@ namespace Memoria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap letra_n {
+        internal static System.Drawing.Bitmap eye_slash_solid {
             get {
-                object obj = ResourceManager.GetObject("letra n", resourceCulture);
+                object obj = ResourceManager.GetObject("eye_slash_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_solid {
+            get {
+                object obj = ResourceManager.GetObject("eye_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap floppy_disk_regular {
+            get {
+                object obj = ResourceManager.GetObject("floppy_disk_regular", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo {
+            get {
+                object obj = ResourceManager.GetObject("fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lock_solid_white {
+            get {
+                object obj = ResourceManager.GetObject("lock_solid_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_white {
+            get {
+                object obj = ResourceManager.GetObject("logout_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +203,69 @@ namespace Memoria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap microphone_slash_solid {
+            get {
+                object obj = ResourceManager.GetObject("microphone_slash_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap microphone_solid {
+            get {
+                object obj = ResourceManager.GetObject("microphone_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap N {
             get {
                 object obj = ResourceManager.GetObject("N", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pen_to_square_regular {
+            get {
+                object obj = ResourceManager.GetObject("pen_to_square_regular", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rango {
+            get {
+                object obj = ResourceManager.GetObject("rango", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rotate_left_solid {
+            get {
+                object obj = ResourceManager.GetObject("rotate_left_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rotate_left_solid1 {
+            get {
+                object obj = ResourceManager.GetObject("rotate_left_solid1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +313,16 @@ namespace Memoria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user_regular_white {
+            get {
+                object obj = ResourceManager.GetObject("user_regular_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap V {
             get {
                 object obj = ResourceManager.GetObject("V", resourceCulture);
@@ -186,6 +336,26 @@ namespace Memoria.Properties {
         internal static System.Drawing.Bitmap W {
             get {
                 object obj = ResourceManager.GetObject("W", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xmark_solid {
+            get {
+                object obj = ResourceManager.GetObject("xmark_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xmark_solid1 {
+            get {
+                object obj = ResourceManager.GetObject("xmark_solid1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Memoria
 {
     public partial class Form1 : Form
     {
+
+        private String phUsuario = "USUARIO123";
         public Form1()
         {
             InitializeComponent();
@@ -22,54 +25,43 @@ namespace Memoria
             //Maximizamos el tamaño de la pantalla
             this.WindowState = FormWindowState.Maximized;
             //Seleccionamos los colores que se van a utilizar
-            Color fondo = ColorTranslator.FromHtml("#D9D9D9");
-            Color fondocaja = ColorTranslator.FromHtml("#576162");
-            Color letras = ColorTranslator.FromHtml("#C30606");
+            Color fondocaja = Color.White;
+            Color letras = Color.White;
             //Aplicamos los colores
-            this.BackColor = fondo;
             txtUsuario.BackColor = fondocaja;
             txtContrasena.BackColor = fondocaja;
-            txtUsuario.ForeColor = Color.White;
-            txtContrasena.ForeColor = Color.White;
+            txtUsuario.Text = phUsuario;
+            txtUsuario.ForeColor = Color.Gray;
+            txtUsuario.Enter += RemovePlaceholder;
+            txtUsuario.Leave += SetPlaceholder;
+            txtContrasena.ForeColor = Color.Gray;
             label1.ForeColor = letras;
             lblContrasena.ForeColor = letras;
             lblUsuario.ForeColor = letras;
             lblRegistro.ForeColor = letras;
             lblRegistro.VisitedLinkColor = letras;
             btnIngresar.BackColor = fondocaja;
-            btnIngresar.ForeColor = letras;
-            Centrar();
+            btnIngresar.ForeColor = Color.Gray;
+            btnojo.BackgroundImage = Properties.Resources.eye_solid;
+            btnojo.BackgroundImageLayout = ImageLayout.Zoom;
+            this.BackgroundImage = Properties.Resources.fondo;
         }
 
-        //Función para centrar los elementos en la ventana
-        public void Centrar()
+        private void RemovePlaceholder(object sender, EventArgs e)
         {
-            label1.AutoSize = true;
-            label1.Location = new Point((ClientSize.Width - label1.Width) / 2, label1.Height * 3);
-            int pos = label1.Top + lblUsuario.Height;
-            lblUsuario.Location = new Point((ClientSize.Width - txtUsuario.Width) / 2, pos + lblUsuario.Height);
-            txtUsuario.Location = new Point((ClientSize.Width - txtUsuario.Width) / 2, pos + lblUsuario.Height + txtUsuario.Height);
-            int pos2 = pos + lblUsuario.Height + txtUsuario.Height;
-            lblContrasena.Location = new Point((ClientSize.Width - txtContrasena.Width) / 2, pos2 + (lblContrasena.Height*2));
-            txtContrasena.Location = new Point((ClientSize.Width - txtContrasena.Width) / 2, pos2 + (lblContrasena.Height * 2)+txtContrasena.Height);
-            int posboton = pos2 + (lblContrasena.Height * 2) + txtContrasena.Height;
-            btnIngresar.Location = new Point((ClientSize.Width + btnIngresar.Width) / 2, posboton + (btnIngresar.Height*2));
-            lblRegistro.Location = new Point((ClientSize.Width - lblRegistro.Width) / 2, posboton + (btnIngresar.Height * 2) + (btnIngresar.Height*2));
+            if (txtUsuario.Text == phUsuario)
+            {
+                txtUsuario.Text = "";
+                
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void SetPlaceholder(object sender, EventArgs e)
         {
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-        //En caso de que se redimencione la ventana mantener la alineación de los elementos
-        private void Form1_Resize(object sender, EventArgs e)
-        {
-            Centrar();
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                txtUsuario.Text = phUsuario;
+            }
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -80,10 +72,18 @@ namespace Memoria
             }
             else
             {
-                Inicio sig = new Inicio();
-                sig.Usuario(txtUsuario.Text,txtContrasena.Text);
-                this.Hide();
-                sig.Show();
+                ABC abc = new ABC();
+                if(abc.IniciarSesion(txtUsuario.Text, txtContrasena.Text))
+                {
+                    Inicio sig = new Inicio();
+                    sig.Usuario(txtUsuario.Text);
+                    sig.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("USUARIO Y/O CONTRASEÑA INCORRECTOS");
+                }
             }
         }
 
@@ -91,6 +91,28 @@ namespace Memoria
         {
             Registro registro = new Registro();
             registro.Show();
+            this.Hide();
+        }
+
+        private void btnojo_Click(object sender, EventArgs e)
+        {
+            // Alternar entre mostrar y ocultar la contraseña
+            if (txtContrasena.PasswordChar == '\0')
+            {
+                txtContrasena.PasswordChar = '*'; // Ocultar contraseña
+                btnojo.BackgroundImage = Properties.Resources.eye_solid;
+            }
+            else
+            {
+                txtContrasena.PasswordChar = '\0'; // Mostrar contraseña
+                btnojo.BackgroundImage = Properties.Resources.eye_slash_solid;
+            }
+        }
+
+        private void lblrecuperarcontra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Contrasena contrasena = new Contrasena();
+            contrasena.Show();
             this.Hide();
         }
     }
